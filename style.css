@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    --ff: 'Playwrite AU SA', sans-serif;
+    font-size: 16px;
+    
+}
+body{
+    background-color: #f5f5f5;
+    font-family: var(--ff);
+}
+.container{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+}
+.box{
+    position: absolute;
+    top: 136px;
+    background-color: #0000006b;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 60vh;
+    margin: auto;
+    width: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+h1{
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 3rem;
+    color: aliceblue;
+    font-weight: bold;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    right: 0;
+    left: 0;
+}
+video{
+    position: absolute;
+    top: 0; 
+    width: 100%;
+}
+button{
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    background-color: #000000;
+    color: goldenrod;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-basis: 30%;
+}
+.date-box{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    min-width: 350px;
+    max-width: 520px;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 5rem;
+    padding: 1rem 0;
+    background-color: #fffaf057;
+}
+#date{
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    background-color: #000000;
+    color: goldenrod;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-basis: 60%;
+}
+
+.result-box{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    min-width: 350px;
+    max-width: 520px;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    color: #000;
+}
+.common{
+    padding: 10px 20px;
+    font-size: 1.8rem;
+    background-color: #fffaf071;
+    color: goldenrod;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    flex-basis: 30%;
+    text-align: center;
+}
+.day-p{
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+button:hover, #date:hover{
+    background-color: #000000;
+    color: #fff;
+}
