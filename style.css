@@ -8,6 +8,7 @@
 html{
     --ff: 'Playwrite AU SA', sans-serif;
     font-size: 16px;
+    scroll-behavior: smooth;
     
 }
 body{
@@ -19,21 +20,28 @@ body{
     margin: 0 auto;
     padding: 0;
     position: relative;
+}
+.bg-video{
+    position: relative;
     min-height: 100vh;
-    height: auto;
+    overflow: hidden;
 }
 .box{
     position: absolute;
     top: 136px;
-    background-color: #0000006b;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px) brightness(1.2);
     padding: 20px;
     border-radius: 10px;
     color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.2);
     min-height: 60vh;
+    height: auto;
     margin: auto;
     width: 60%;
     left: 50%;
+    z-index: 11;
     transform: translateX(-50%);
 }
 h1{
@@ -50,9 +58,16 @@ h1{
     left: 0;
 }
 video{
-    position: absolute;
-    top: 0; 
+    position: fixed;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
     width: 100%;
+    height: 100%;
+    z-index: -1;
+    object-fit: cover;
 }
 button{
     padding: 10px 20px;
@@ -105,7 +120,7 @@ button{
     padding: 10px 20px;
     font-size: 1.8rem;
     background-color: #fffaf071;
-    color: goldenrod;
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -119,4 +134,49 @@ button{
 button:hover, #date:hover{
     background-color: #000000;
     color: #fff;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+
+    background-color: goldenrod;
+    cursor: pointer;
+
+}
+@media screen and (max-width: 768px){
+    .box{
+        width: 90%;
+    }
+    h1{
+        font-size: 2rem;
+    }
+    
+}
+@media screen and (max-width: 420px){
+  
+    .box{
+        width: 100%;
+        height: fit-content;
+        padding: 0;
+    }
+    .result-box{
+        padding: 5px;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+    .date-box{
+        margin-top: 1rem;
+    }
+    .common{
+        font-size: 1.2rem;
+        flex: 1 0 25%;
+    }
+    #date{
+        font-size: 1.2rem;
+    }
+    button{
+        font-size: 1.2rem;
+    }
+    .bg-video{
+        min-height: 100vh;
+        height: max-content;
+    }
 }
