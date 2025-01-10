@@ -1,6 +1,10 @@
 
 const birthDate = document.getElementById('date');
 const dateButton = document.getElementById('date-button');
+const dateTime = new Date().toISOString().split('T')[0];
+birthDate.setAttribute('max', dateTime);
+birthDate.setAttribute('value', dateTime);
+
 function calculateExactAge(birthDate) {
 
     let today = new Date();
@@ -25,18 +29,20 @@ function calculateExactAge(birthDate) {
         days += prevMonth.getDate();
     }
     document.getElementById('years').innerHTML = years,
-    document.getElementById('months').innerHTML = months,
-    document.getElementById('days').innerHTML = days
-    return 
+        document.getElementById('months').innerHTML = months,
+        document.getElementById('days').innerHTML = days
+    return
 }
-dateButton.addEventListener('click', function(){
-   if(birthDate.value === ''){
-       alert('Please enter your date of birth')
+dateButton.addEventListener('click', function () {
+
+
+    if (birthDate.value === '') {
+        alert('Please enter your date of birth')
     }
-    else{
+    else {
         calculateExactAge(birthDate.value)
     }
-    console.log(exactAge)
+
 });
 
 
